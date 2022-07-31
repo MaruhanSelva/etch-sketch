@@ -1,0 +1,22 @@
+.content {
+    background: white;
+}
+
+#section {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    gap: 0;
+    align-items: center;
+    border: 2px;
+    border-style: solid;
+}
+
+h1 {
+    text-align: center;
+}
