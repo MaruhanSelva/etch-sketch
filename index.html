@@ -10,40 +10,37 @@
     <h1>Pixel-Paint</h1>
 
     <div id="buttonSect">
-      <button id="clear">Clear Grid</button>
-      <button id="changeSize">Change Grid Size</button>
-      <button id="eraser">Eraser</button>
+      <button class="settings" id="clear">Clear Grid</button>
+      <button class="settings" id="changeSize">Change Grid Size</button>
+      <button class="settings" id="eraser">Eraser</button>
+      <button class="settings" id="calculate">Calculate Blocks</button>
     </div>
 
     <div id="section">
         <div id="container"></div>
     </div>
-
-    <div id="blockSelect">
-      <div class="current"><img class="curBlock" src= "images/oak_plank.png" height = "40px"></div>
-
-      <button class="blocks" id="oak_p"><img src="images/oak_plank.png" height= "25px"></button>
-      <button class="blocks" id="oak_w"><img src="images/oak.jpeg" height= "25px"></button>
-      <button class="blocks" id="birch_p"><img src="images/birch_plank.png" height= "25px"></button>
-      <button class="blocks" id="birch_w"><img src="images/birch.png" height= "25px"></button>
-      <button class="blocks" id="acacia_p"><img src="images/acacia_plank.png" height= "25px"></button>
-      <button class="blocks" id="acacia_w"><img src="images/acacia.png" height= "25px"></button>
-
-      <button class="blocks" id="stone_b"><img src="images/stone_brick.png" height= "25px"></button>
-      <button class="blocks" id="cobble"><img src="images/cobble.png" height= "25px"></button>
-
-      <button class="blocks" id="sand"><img src="images/sand.png" height= "25px"></button>
-      <button class="blocks" id="red_w"><img src="images/red_w.png" height= "25px"></button>
-      <button class="blocks" id="black_w"><img src="images/black_w.png" height= "25px"></button>
-      <button class="blocks" id="magenta_w"><img src="images/magenta_w.png" height= "25px"></button>
-      <button class="blocks" id="lime_w"><img src="images/lime_w.png" height= "25px"></button>
-      <button class="blocks" id="dirt"><img src="images/dirt.png" height= "25px"></button>
-      <button class="blocks" id="diamond"><img src="images/diamond.png" height= "25px"></button>
-      <button class="blocks" id="gold"><img src="images/gold.png" height= "25px"></button>
-
-
-
-
+    <div class="container">
+      <div id="blockSelect">
+        <div class="current"><img class="curBlock" src= "images/oak_plank.png" height = "40px"></div>
+        <div class = "blockGrid">
+          <button class="blocks" id="oak_p"><img src="images/oak_plank.png" height= "25px"></button>
+          <button class="blocks" id="oak_w"><img src="images/oak.jpeg" height= "25px"></button>
+          <button class="blocks" id="birch_p"><img src="images/birch_plank.png" height= "25px"></button>
+          <button class="blocks" id="birch_w"><img src="images/birch.png" height= "25px"></button>
+          <button class="blocks" id="acacia_p"><img src="images/acacia_plank.png" height= "25px"></button>
+          <button class="blocks" id="acacia_w"><img src="images/acacia.png" height= "25px"></button>
+          <button class="blocks" id="stone_b"><img src="images/stone_brick.png" height= "25px"></button>
+          <button class="blocks" id="cobble"><img src="images/cobble.png" height= "25px"></button>
+          <button class="blocks" id="sand"><img src="images/sand.png" height= "25px"></button>
+          <button class="blocks" id="red_w"><img src="images/red_w.png" height= "25px"></button>
+          <button class="blocks" id="black_w"><img src="images/black_w.png" height= "25px"></button>
+          <button class="blocks" id="magenta_w"><img src="images/magenta_w.png" height= "25px"></button>
+          <button class="blocks" id="lime_w"><img src="images/lime_w.png" height= "25px"></button>
+          <button class="blocks" id="dirt"><img src="images/dirt.png" height= "25px"></button>
+          <button class="blocks" id="diamond"><img src="images/diamond.png" height= "25px"></button>
+          <button class="blocks" id="gold"><img src="images/gold.png" height= "25px"></button>
+        </div>
+      </div>
     </div>
     
 

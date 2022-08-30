@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-
 .content {
     background: white;
 }
-
 
 #section {
     display: flex;
@@ -33,30 +31,17 @@ h1 {
     margin-bottom: 10px;
 }
 
-#clear {
-    background-color: #B3B3B3;
-    display: inline-block;
-    text-decoration: none;
-}
-
-#changeSize {
-    background-color: #B3B3B3;
-    display: inline-block;
-    text-decoration: none;
-}
-
-#eraser {
-    background-color: #B3B3B3;
-    display: inline-block;
-    text-decoration: none;
-}
 
 #blockSelect {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
-    background-color: white;
+    background-color: #c6c6c6;
+    width: 500px;
+    border: solid black;
+    padding-bottom: 10px;
+    border-radius: 10px;
 }
 
 .blocks {
@@ -69,6 +54,10 @@ h1 {
     width: 40px;
 }
 
+.blockGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
 
 .current {
     border: solid 0.3em;
@@ -77,4 +66,22 @@ h1 {
     padding: 0.5em;
     background-color: #8b8b8b;
     border-color: #333333 #B3B3B3 #B3B3B3 #333333;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+
+}
+
+.settings {
+    background-color: #B3B3B3;
+    display: inline-block;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("images/dirtbackground.jpeg");
 }

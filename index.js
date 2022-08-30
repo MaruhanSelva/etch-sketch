@@ -91,9 +91,6 @@ function blockUpdate() {
 }
 
 
-
-
-
 // Logic For Buttons
 const oak_wood = document.querySelector("#oak_w");
 oak_wood.addEventListener('click', () => {
