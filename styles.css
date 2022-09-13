@@ -11,15 +11,25 @@ body {
 
 .item {
     color: white;
+    font-family: 'Roboto Slab', serif;
+    padding: 20px;
 }
 
-#blockCount {
+#wrapper {
     border: 5px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
     border-style: solid;
     width: 15rem;
     background-color:#333333;
     opacity: 0.8;
-    display: flex;
+}
+
+#blockCount {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
     justify-content: center;
 }
 
