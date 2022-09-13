@@ -37,35 +37,46 @@ function mouseState() {
     }
 }
 
+function getPathFromStyle(string) {
+    let sample_str = "/images";
+    let new_str = "." + string.slice(string.indexOf(sample_str), string.length - 2);
+    return new_str;
+}
+
 function gridColour(e) {
     if (mouseDown == true) {
-        const old_style = String(getComputedStyle(e.target).backgroundImage);
+        let old_style = String(getComputedStyle(e.target).getPropertyValue('background-image'));
+        let old_path = getPathFromStyle(old_style);
+        console.log(old_path);
         if (mode === "draw") {
             if (old_style != "none") {
-                blocks.set(old_style, blocks.get(old_style) - 1);
+                blocks.set(old_path, blocks.get(old_path) - 1);
             }
             e.target.style.backgroundImage = "url(" + block + ")";
             e.target.style.backgroundSize = "" + (500/number) + "px " + (500/number) + "px";
 
-            const new_style = String(getComputedStyle(e.target).backgroundImage);
-            if (blocks.has(new_style) === false) {
-                blocks.set(new_style, 1);
+            let new_style = String(getComputedStyle(e.target).getPropertyValue('background-image'));
+            let new_path = getPathFromStyle(new_style);
+            if (blocks.has(new_path) === false) {
+                blocks.set(new_path, 1);
             } else {
-                blocks.set(new_style, blocks.get(new_style) + 1);
+                blocks.set(new_path, blocks.get(new_path) + 1);
             }
-            //e.target.style.background = 'black';
         } else {
+
+
             if (old_style != "none") {
-                blocks.set(old_style, blocks.get(old_style) - 1);
+                blocks.set(old_path, blocks.get(old_path) - 1);
             }
             e.target.style.backgroundImage = 'none';
-           // e.target.style.background = 'white';
+
         }
     }
 }
 
 function clearGrid() {
     blocks.clear();
+    document.querySelectorAll(".item").forEach(el => el.remove());
     document.querySelectorAll(".content").forEach(el => el.remove());
 }
 
@@ -86,6 +97,7 @@ sizeButton.addEventListener('click', (e) => {
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener('click', (e) => {
     blocks.clear();
+    document.querySelectorAll(".item").forEach(el => el.remove());
     const cells = document.querySelectorAll(".content").forEach(el => 
         el.style.background = 'white')
 });
@@ -110,11 +122,20 @@ function blockUpdate() {
 const blockWindow = document.querySelector("#blockCount");
 
 function blockCount() {
+    document.querySelectorAll(".item").forEach(el => el.remove());
     for (const [key, value] of blocks) {
         const item = document.createElement('div');
-        
+        console.log(value);
+        item.classList.add('item');
+        const img = document.createElement('img');
+        console.log(key);
+        img.src = String(key);
+        img.width = 40;
+        img.height = 40;
+        item.appendChild(img);
+        item.innerHTML += "x" + String(value);
+        blockWindow.appendChild(item);
     }
-
 }
 
 const calculateButton = document.querySelector("#calculate");

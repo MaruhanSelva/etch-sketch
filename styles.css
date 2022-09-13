@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Silkscreen:wght@400;700&display=swap');
 
-
 body {
     margin: 0;
+}
+
+.ui {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    color: white;
+}
+
+#blockCount {
+    border: 5px;
+    border-style: solid;
+    width: 15rem;
+    background-color:#333333;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
 }
 
 .header {
