@@ -259,5 +259,19 @@ gold.addEventListener('click', () => {
     blockUpdate();
 });
 
+const brown_w = document.querySelector("#brown_w");
+brown_w.addEventListener('click', () => {
+    block = "images/brown_w.png";
+    mode = "draw";
+    blockUpdate();
+});
+
+const yellow_w = document.querySelector("#yellow_w");
+yellow_w.addEventListener('click', () => {
+    block = "images/yellow_w.png";
+    mode = "draw";
+    blockUpdate();
+});
+
 
 drawGrid(16);
